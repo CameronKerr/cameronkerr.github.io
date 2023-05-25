@@ -1,0 +1,41 @@
+body {
+  font-family: 'Akzidenz-Grotesk Next', sans-serif;
+  background-color: white;
+  box-shadow: 0 0 1em 1em brown;
+}
+
+h2 {
+  color: #C4A484;
+}
+h1 {
+  color: brown;
+  font-size: 3.5em;
+  line-height: 1em;
+  text-shadow: 1px 1px 1px #ccc;
+
+}
+* {
+  Margin-left: 8px;
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.columnleft{
+  flex: 25%;
+}
+.columnright{
+  flex: 40%;
+}
+.buffer{
+  Flex: 35%;
+}
+img {
+    max-width: 80%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
