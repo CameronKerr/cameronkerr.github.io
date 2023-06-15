@@ -1,108 +1,218 @@
-<!DOCTYPE html>
-<link href="style.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Cameron Kerr</title>
-    </head>
+<head>
+	<title>Working</title>
+	<link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+    <style>
+        /* Set the height and width of the sections to occupy the whole page */
+		html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+			background-color: #f5f5dc;
+        }
+		*{
+   			padding: 0;
+    		margin: 0;
+            font-family: "EB Garamond";
+        }
+        h2 {
+            color: darkred;
+        }
+        p {
+            margin: 10px;
+        }
+        header, footer {
+            height: 150px;
+            width: 100%;
+        }
+		main {
+			width: 100%;
+            border: 5px solid #43302E;
+		}
+        /* Add your custom styles for each section */
+        header {
+            background-color:#F5F5DC;
+        }
+
+        main {
+			background: conic-gradient(from 90deg at 1px 1px,#F5F5DC 90deg,#43302E 0) 0 0/25px 25px;
+			background-color: #F5F5DC;
+			display: flex;
+			align-items: center;
+    		justify-content: center;
+			padding-left: 2%;
+		}
+
+        footer {
+            background-color: #F5F5DC;
+        }
+		.small-box {
+  			width: 75%;
+			height: 90%;
+            background-color: #F5F5DC;
+            border: 5px solid #43302E;
+            padding: 1%;
+            margin-top: 15px;
+            margin-bottom: 15px
+        }
+		img {
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+        }
+        		.folder {
+			display: inline-block;
+        }
+        .row {
+            display: flex;
+        }
+        .column {
+        flex: 50%;
+        }
+        .columnleft{
+        flex: 50%;
+        }
+        .columnright{
+        flex: 45%;
+        }
+        .buffer{
+        Flex: 5%;
+        }
+    </style>
+</head>
 <body>
-<div>
-<a href=index.html>Home</a>
+    <header>
+		<script>
+			function hover_working(element) {
+				element.setAttribute('src', 'pic/Folder_hover_working.png');
+			}
+			
+			function unhover_working(element) {
+				element.setAttribute('src', 'pic/Folder_working.png');
+			 }
+			 function hover_writing(element) {
+				element.setAttribute('src', 'pic/Folder_hover_writing.png');
+			}
+			
+			function unhover_writing(element) {
+				element.setAttribute('src', 'pic/Folder_writing.png');
+			 }
+			 function hover_reading(element) {
+				element.setAttribute('src', 'pic/Folder_hover_reading.png');
+			}
+			
+			function unhover_reading(element) {
+				element.setAttribute('src', 'pic/Folder_reading.png');
+			 }
+			 function hover_home(element) {
+				element.setAttribute('src', 'pic/home_hover.png');
+			}
+			
+			function unhover_home(element) {
+				element.setAttribute('src', 'pic/home.png');
+ 			}
+		</script>
+			<a href=working.html><img src="pic/Folder_working.png" onmouseover="hover_working(this);" onmouseout="unhover_working(this);"/></a>
+			<a href=writing.html><img src="pic/Folder_writing.png" onmouseover="hover_writing(this);" onmouseout="unhover_writing(this);"/></a>
+			<a href=reading.html><img src="pic/Folder_reading.png" onmouseover="hover_reading(this);" onmouseout="unhover_reading(this);"/></a>
+			<a href="index.html"><img style="width: 10%; height:10%; position: absolute;top: 25px;right: 0px;" src="pic/home.png" onmouseover="hover_home(this);" onmouseout="unhover_home(this);"/></a>
+	</header>
+	<main>
+		<div class = "small-box">
+            <div class="row">
+                <div class="column">
+                <h2>Research at the Princess Margaret Cancer Centre</h2>
+              <p>Over the past 4 years, I've been working at the Princess Margaret Cancer Research Centre on a research project in the Pugh Lab. The project utilizes a novel TCR sequencing method known as CapTCR for non-invasive immune monitoring of solid-tumour patients given adoptive T-cell therapy.
+              <br><br>
+              This project has developed my ability to run bioinformatics pipelines on large multi-omics datasets as well as perform visualization and statistical analysis in R, Python, and Excel. In addition, this project has developed my ability to write manuscripts, perform literature reviews, and work with other researchers in a lab environment.
+              <br><br>
+              The figure to the right is an example of clone tracking, one of the main visualization techniques in the project. Clone tracking allows us to visualize the entire T-cell repertoire at a single timepoint, over multiple timepoints, and in a cross-patient manner. Clonotypes present in the infusion product and one other sample are coloured and tracked through all timepoints. The size of each section is dependent on the number of T-cells in that clonotype.
+              <br><br>
+              I've had the opportunity to present my research at the Trans-Atlantic Journeys in Cell and Gene Therapy joint meeting between researchers at the University of Toronto and the University of Manchester.
+              <br><br>
+              Currently, the manuscript has been written and is under review for publication. Here is a link to the <a href=https://github.com/pughlab/CapTCR-TIL-Tracking>project GitHub.</a>
+              </p>
+              </div>
+              <div class="column">
+              <img style="max-width:80%;height: auto;width: auto\9; /* ie8 */" src=pic/CapTCR.png alt="Clonetrack" width="360" height="420">
+              </div>
+              </div>
+        <hr>
+        <h2>Mathematical Visualizations</h2>
+            <div class="row">
+                <div class="column">
+                    <p>After many arduous math courses at the University of Toronto, mathematical visualizations and computational geometry algorithms have become a new hobby of mine. Here is my growing list of programs.</p>
+                    <h3>Graham Scan Algorithm: Convex Hull calculation</h3>
 
-<h1>Projects</h1>
+                    <p>The convex hull of a set of points is the set of all possible convex combinations formed by the points. It is one of the most important concepts in linear programming and optimization. Graham Scan is an algorithm for finding the convex hull of a finite set of points. 
+                    <br><br>
+                    The program's functions can be used individually for the calculation of the convex hull of any input points. However, standalone execution calculates the convex hull of n randomly generated points where n is user provided. The other program contained analyzes and plots the runtime complexity of the algorithm which is O(n log n).
+                    <br><br>
+                    The GitHub can be accessed<a href=https://github.com/CameronKerr/ConvexHull-GrahamScan>here.</a>
+                    </p>
 
-<hr>
+                    <h3>Bowyer Watson Algorithm: Triangulation calculation</h3>
 
-<div class="row">
-  <div class="column">
-  <h2>Research at the Princess Margaret Cancer Centre</h2>
-<p>Over the past 4 years, I've been working at the Princess Margaret Cancer Research Centre on a research project in the Pugh Lab. The project utilizes a novel TCR sequencing method known as CapTCR for non-invasive immune monitoring of solid-tumour patients given adoptive T-cell therapy.
-<br><br>
-This project has developed my ability to run bioinformatics pipelines on large multi-omics datasets as well as perform visualization and statistical analysis in R, Python, and Excel. In addition, this project has developed my ability to write manuscripts, perform literature reviews, and work with other researchers in a lab environment.
-<br><br>
-The figure to the right is an example of clone tracking, one of the main visualization techniques in the project. Clone tracking allows us to visualize the entire T-cell repertoire at a single timepoint, over multiple timepoints, and in a cross-patient manner. Clonotypes present in the infusion product and one other sample are coloured and tracked through all timepoints. The size of each section is dependent on the number of T-cells in that clonotype.
-<br><br>
-I've had the opportunity to present my research at the Trans-Atlantic Journeys in Cell and Gene Therapy joint meeting between researchers at the University of Toronto and the University of Manchester.
-<br><br>
-Currently, the manuscript has been written and is under review for publication. Here is a link to the<a href=https://github.com/pughlab/CapTCR-TIL-Tracking>project GitHub.</a>
-</p>
-</div>
-<div class="column">
-<img src="pic/CapTCR.png" alt="Clonetrack" width="360" height="420">
-</div>
-</div>
+                    <p>A triangulation of a set of points is the division of the convex hull made from those points into triangles. A Delaunay triangulation is a type of triangulation in which no points lie inside the circumcircle created by each triangle. These triangulations have many applications. For example they are used to created triangulated irregular networks which give a vector representation of a 3D surface in GIS applications.
+                    <br><br>
+                    Similar to the Graham Scan program, the functions can be used individually for the calculation of the triangulation of any input points. However, standalone execution calculates the triangulation of n randomly generated points where n is user provided. The other program contained analyzes and plots the runtime complexity of the algorithm which is O(n log n).
+                    
+                    The GitHub can be accessed<a href=https://github.com/CameronKerr/Triangulation-BowyerWatson>here.</a>
+                    </p>
+                    </div>
+                <div class="column">
+                    <img style="max-width:80%;height: auto;width: auto\9; /* ie8 */" src="pic/mathvis.png" alt="Triangulation" width="500" height="500">
+                </div>
+            </div>
 
-<hr>
-<h2>Mathematical Visualizations</h2>
-<div class="row">
-  <div class="column">
-<p>After many arduous math courses at the University of Toronto, mathematical visualizations and computational geometry algorithms have become a new hobby of mine. Here is my growing list of programs.</p>
-<h3>Graham Scan Algorithm: Convex Hull calculation</h3>
+            <hr>
+            <h2>Immune 2.0</h2>
+                <p>A part of the Pioneer international competition, my partner Ahmed Moselhi and I developed Immune 2.0. The project used a machine learning alrgorithm to predict T-cell binding. This algorithm would allow for rapid testing of new vaccines and immunotherapies. Immune 2.0 ended up becoming a winning project a part of the April 2019 cohort. We were also interviewed by Laura Deming about the project.<a href=https://youtu.be/009QDAqK6d4?list=PLCvXYFpVaqCbeI24HtKqK09pWFLY8r5Di>Link to video.</a><p>
+            <hr>
+            <h2>Various Research Proposals</h2>
 
-<p>The convex hull of a set of points is the set of all possible convex combinations formed by the points. It is one of the most important concepts in linear programming and optimization. Graham Scan is an algorithm for finding the convex hull of a finite set of points. 
-<br><br>
-The program's functions can be used individually for the calculation of the convex hull of any input points. However, standalone execution calculates the convex hull of n randomly generated points where n is user provided. The other program contained analyzes and plots the runtime complexity of the algorithm which is O(n log n).
-<br><br>
-The GitHub can be accessed<a href=https://github.com/CameronKerr/ConvexHull-GrahamScan>here.</a>
-</p>
+                <p>The ability to write a research proposal is an important skill in academia. Over the past few years, I've written a few research proposals in the molecular biology space.</p>
 
-<h3>Bowyer Watson Algorithm: Triangulation calculation</h3>
+            <h3>Production of Highly Variable Hemagglutinin Antigens by Lactococcus lactis populations as a basis for an evolving vaccine</h3>
 
-<p>A triangulation of a set of points is the division of the convex hull made from those points into triangles. A Delaunay triangulation is a type of triangulation in which no points lie inside the circumcircle created by each triangle. These triangulations have many applications. For example they are used to created triangulated irregular networks which give a vector representation of a 3D surface in GIS applications.
-<br><br>
-Similar to the Graham Scan program, the functions can be used individually for the calculation of the triangulation of any input points. However, standalone execution calculates the triangulation of n randomly generated points where n is user provided. The other program contained analyzes and plots the runtime complexity of the algorithm which is O(n log n).
- 
-The GitHub can be accessed<a href=https://github.com/CameronKerr/Triangulation-BowyerWatson>here.</a>
-</p>
-</div>
-  <div class="column">
-<img src="pic/mathvis.png" alt="Triangulation" width="500" height="500">
-</div>
-</div>
+                <p>The rapid mutation of viral antigens results in the decreased efficacy of vaccines, and the need for consistent boosters and our yearly flu shot. This research proposal revolves around the idea of creating a vaccine which can evolve with viral antigens. The overall idea was to develop a bacteria which can release antigens into the blood stream as a vaccine would do. But this vaccine would carry the ability to continuously mutate the gene coding for the antigen, allowing us to simulate (and follow) the antigenic drift of the viral antigen.
+                <br><br>
+                The research proposal can be found<a href='file/Production of Highly Variable Hemagglutinin Antigens by Lactococcus lactis populations as a basis for an evolving vaccine.pdf'>here</a>.
+                </p>
 
-<hr>
-<h2>Immune 2.0</h2>
+            <h3>Surface-Engineered Lentiviral for Targeted Chimeric Antigen Receptor Transduction on T-memory stem cells</h3>
 
-<p>A part of the Pioneer international competition, my partner Ahmed Moselhi and I developed Immune 2.0. The project used a machine learning alrgorithm to predict T-cell binding. This algorithm would allow for rapid testing of new vaccines and immunotherapies. Immune 2.0 ended up becoming a winning project a part of the April 2019 cohort. We were also interviewed by Laura Deming about the project.<a href=https://youtu.be/009QDAqK6d4?list=PLCvXYFpVaqCbeI24HtKqK09pWFLY8r5Di>Link to video.</a><p>
-<hr>
-<h2>Various Research Proposals</h2>
+                <p>During my research at the Princess Margaret Cancer Research Centre, I noticed the selective expansion of rare T-cell clonotypes. What this means is that there are few T-cells which have a high proliferative capacity in vivo. I hypothesized that these clonotypes could have a T-memory stem cell phenotype. This proposal, aims to demonstrate the use of CAR T-cell therapy to target these T-cell with high proliferative capacity in order to increase the efficacy of novel cancer immunotherapies.
+                <br><br>
+                The research proposal can be found<a href='file/Project SELECT - Surface Engineered LEntiviral CAR transduction on Tscms.pdf'>here.</a>
+                </p>
 
-<p>The ability to write a research proposal is an important skill in academia. Over the past few years, I've written a few research proposals in the molecular biology space.</p>
+            <h3>Increasing Somatic Telomerase Expression through Inhibition of the SUV39H1/SUV39H2 Methyltransferases using PEGylated Liposomes</h3>
 
-<h3>Production of Highly Variable Hemagglutinin Antigens by Lactococcus lactis populations as a basis for an evolving vaccine</h3>
+                <p>Longevity is an emerging field in molecular biology with large philosophical implications and lots of biological problems. This research proposal aimed to eliminate the shortening of our telomeres (one of the causes of aging) through epigenetic manipulation. Along with my group, I presented this proposal at the University of Toronto Student Society for Stem Cell Research case study competition and was awarded first place.
+                <br><br>
+                The research proposal can be found<a href='file/Xist Paper V2.pdf'>here.</a>
+                </p>
+            <hr>
+            <h2>CaMS-Vis: Cancer Mutational Signature Visualization</h2>
 
-<p>The rapid mutation of viral antigens results in the decreased efficacy of vaccines, and the need for consistent boosters and our yearly flu shot. This research proposal revolves around the idea of creating a vaccine which can evolve with viral antigens. The overall idea was to develop a bacteria which can release antigens into the blood stream as a vaccine would do. But this vaccine would carry the ability to continuously mutate the gene coding for the antigen, allowing us to simulate (and follow) the antigenic drift of the viral antigen.
-<br><br>
-The research proposal can be found<a href='file/Production of Highly Variable Hemagglutinin Antigens by Lactococcus lactis populations as a basis for an evolving vaccine.pdf'>here</a>.
-</p>
+                <p>The construction of mutational catalogues are necessary for the analysis for mutational signatures for many genetically-associated diseases but are highly studies in cancer. Visualizations from variant called files are necessary for these analyses. CaMS-Vis is a tool for the visualization of mutational catalogues based on grouping into the 6 mutation classes and 96 mutation types from a binary variant call format (bcf) file.
+                <br><br>
+                The GitHub can be accessed<a href=https://github.com/CameronKerr/CaMS-Vis>here.</a>
+                <br>
+            <img style="max-width:80%;height: auto;width: auto\9; /* ie8 */" src="pic/CaMS.png" alt="CaMS" width="1050" height="158">
+            </p>
+            <hr>
+            <h2>Using CRISPR Cas9 to Genetically Modify E.coli</h2>
 
-<h3>Surface-Engineered Lentiviral for Targeted Chimeric Antigen Receptor Transduction on T-memory stem cells</h3>
-
-<p>During my research at the Princess Margaret Cancer Research Centre, I noticed the selective expansion of rare T-cell clonotypes. What this means is that there are few T-cells which have a high proliferative capacity in vivo. I hypothesized that these clonotypes could have a T-memory stem cell phenotype. This proposal, aims to demonstrate the use of CAR T-cell therapy to target these T-cell with high proliferative capacity in order to increase the efficacy of novel cancer immunotherapies.
-<br><br>
-The research proposal can be found<a href='file/Project SELECT - Surface Engineered LEntiviral CAR transduction on Tscms.pdf'>here.</a>
-</p>
-
-<h3>Increasing Somatic Telomerase Expression through Inhibition of the SUV39H1/SUV39H2 Methyltransferases using PEGylated Liposomes</h3>
-
-<p>Longevity is an emerging field in molecular biology with large philosophical implications and lots of biological problems. This research proposal aimed to eliminate the shortening of our telomeres (one of the causes of aging) through epigenetic manipulation. Along with my group, I presented this proposal at the University of Toronto Student Society for Stem Cell Research case study competition and was awarded first place.
-<br><br>
-The research proposal can be found<a href='file/Xist Paper V2.pdf'>here.</a>
-</p>
-<hr>
-<h2>CaMS-Vis: Cancer Mutational Signature Visualization</h2>
-
-<p>The construction of mutational catalogues are necessary for the analysis for mutational signatures for many genetically-associated diseases but are highly studies in cancer. Visualizations from variant called files are necessary for these analyses. CaMS-Vis is a tool for the visualization of mutational catalogues based on grouping into the 6 mutation classes and 96 mutation types from a binary variant call format (bcf) file.
-<br><br>
-The GitHub can be accessed<a href=https://github.com/CameronKerr/CaMS-Vis>here.</a>
-<br>
-<img src="pic/CaMS.png" alt="CaMS" width="1050" height="158">
-</p>
-<hr>
-<h2>Using CRISPR Cas9 to Genetically Modify E.coli</h2>
-
-<p>I used the CRISPR Cas9 system to modify a non-pathogenic strain of E.coli in order to be able to fluoresce. This was my first introduction to many wet lab techniques and organizing an experiment.
-</p>
-<br>
-</div>
+                <p>I used the CRISPR Cas9 system to modify a non-pathogenic strain of E.coli in order to be able to fluoresce. This was my first introduction to many wet lab techniques and organizing an experiment.
+                </p>
+                <br>
+            </div>
+    </div>
+</main>
+<footer>
+</footer>
 </body>
 </html>

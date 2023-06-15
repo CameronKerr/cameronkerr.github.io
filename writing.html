@@ -1,16 +1,117 @@
-<!DOCTYPE html>
-<link href="style.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Cameron Kerr</title>
-    </head>
-<body>
-<div>
-<a href=index.html>Home</a>
+<head>
+	<title>Writing</title>
+	<link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+    <style>
+        /* Set the height and width of the sections to occupy the whole page */
+		html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+			background-color: #f5f5dc;
+        }
+		*{
+   			padding: 0;
+    		margin: 0;
+			font-family: "EB Garamond";
+			overflow:hidden;
+		}
+        header, footer {
+            height: 15%;
+            width: 100%;
+        }
+		main {
+			height: 70%;
+			width: 100%;
+			border: 5px solid #43302E;
+		}
+        /* Add your custom styles for each section */
+        header {
+            background-color:#F5F5DC;
+        }
 
-<h1>Blog</h1>
-<hr>
-<h4><a href=https://faultlines.thevarsity.ca/article/tracing-taddle-creek/>Tracing Taddle Creek - The Varsity Faultlines Magazine</a></h4>
-</div>
+        main {
+			background: conic-gradient(from 90deg at 1px 1px,#F5F5DC 90deg,#43302E 0) 0 0/25px 25px;
+			background-color: #F5F5DC;
+			display: flex;
+			align-items: center;
+    		justify-content: center;
+			padding-left: 2%;
+		}
+
+        footer {
+            background-color: #F5F5DC;
+        }
+		.small-box {
+  			width: 50%;
+			height: 70%;
+            background-color: #F5F5DC;
+            border: 5px solid #43302E;
+			padding: 1%;
+        }
+		.side-box {
+			width: 20%;
+			height: 70%;
+			background-color: #F5F5DC;
+			border: 5px solid #43302E;
+			margin-left: 30px;
+			padding: 1%; 
+		}
+		img {
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+		}
+		.folder {
+			display: inline-block;
+		}
+    </style>
+</head>
+<body>
+    <header>
+		<script>
+			function hover_working(element) {
+				element.setAttribute('src', 'pic/Folder_hover_working.png');
+			}
+			
+			function unhover_working(element) {
+				element.setAttribute('src', 'pic/Folder_working.png');
+			 }
+			 function hover_writing(element) {
+				element.setAttribute('src', 'pic/Folder_hover_writing.png');
+			}
+			
+			function unhover_writing(element) {
+				element.setAttribute('src', 'pic/Folder_writing.png');
+			 }
+			 function hover_reading(element) {
+				element.setAttribute('src', 'pic/Folder_hover_reading.png');
+			}
+			
+			function unhover_reading(element) {
+				element.setAttribute('src', 'pic/Folder_reading.png');
+			 }
+			 function hover_home(element) {
+				element.setAttribute('src', 'pic/home_hover.png');
+			}
+			
+			function unhover_home(element) {
+				element.setAttribute('src', 'pic/home.png');
+ 			}
+		</script>
+			<a href=working.html><img src="pic/Folder_working.png" onmouseover="hover_working(this);" onmouseout="unhover_working(this);"/></a>
+			<a href=writing.html><img src="pic/Folder_writing.png" onmouseover="hover_writing(this);" onmouseout="unhover_writing(this);"/></a>
+			<a href=reading.html><img src="pic/Folder_reading.png" onmouseover="hover_reading(this);" onmouseout="unhover_reading(this);"/></a>
+			<a href="index.html"><img style="width: 10%; height:10%; position: absolute;top: 25px;right: 0px;" src="pic/home.png" onmouseover="hover_home(this);" onmouseout="unhover_home(this);"/></a>
+	</header>
+	<main>
+		<div class = "small-box">
+            <h1 style="padding-bottom: 15px;font-size: 40px;color: darkred;">Blog</h1>
+            <hr>
+                <h4 style="padding-top: 15px;font-size:20px;"><a href=https://faultlines.thevarsity.ca/article/tracing-taddle-creek/>Tracing Taddle Creek - The Varsity Faultlines Magazine</a></h4>
+        </div>
+    </main>
 </body>
 </html>
+
