@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math Vis</title>
+	<link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+    <style>
+		html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+			background-color: #f5f5dc;
+        }
+		*{
+   			padding: 0;
+    		margin: 0;
+			font-family: "EB Garamond";
+		}
+        header, footer {
+            height: 150px;
+            width: 100%;
+        }
+		main {
+			width: 100%;
+            border: 5px solid #43302E;
+		}
+        /* Add your custom styles for each section */
+        header {
+            background-color:#F5F5DC;
+        }
+
+        main {
+			background: conic-gradient(from 90deg at 1px 1px,#F5F5DC 90deg,#43302E 0) 0 0/25px 25px;
+			background-color: #F5F5DC;
+			display: flex;
+			align-items: center;
+    		justify-content: center;
+			padding-left: 2%;
+		}
+
+        footer {
+            background-color: #F5F5DC;
+        }
+		.small-box {
+  			width: 90%;
+			height: 70%;
+            background-color: #F5F5DC;
+            border: 5px solid #43302E;
+            padding: 1%;
+            margin-top: 15px;
+            margin-bottom: 15px
+        }
+		.side-box {
+			width: 20%;
+			height: 70%;
+			background-color: #F5F5DC;
+			border: 5px solid #43302E;
+			margin-left: 30px;
+			padding: 1%; 
+		}
+		.folder {
+			display: inline-block;
+		}
+		.row {
+		display: flex;
+		}
+		.columnleft {
+		float: left;
+		width: 30%;
+		}
+		.columnright {
+		float: left;
+		width:60%;
+		}
+		.columnfar {
+		width:10%
+		}
+		table, th, td {
+		 border:1px solid black;
+		}
+    </style>
+</head>
+<body>
+	<main>
+	  <div class = "small-box">
+	<h2 style="padding-bottom: 15px;font-size: 40px;color: darkred;">Mandelbrot set visualization<center></h2>
+	    <div class="row">
+                <div class="columnleft">
+	    <video width="320" height="240" controls>
+		<source src="anim/highquality_mandelbrot.mp4" type="video/mp4">
+	      Your browser does not support the video tag.
+		</video>
+		</div>
+		<div class="columnright">
+		<br><br>
+		<p>
+		This animation is an approximation of the mandelbrot set. The mandelbrot set is a subset of the complex plane where the complex number c is in the set if the sequencing taking z to z<sup>2</sup> + c doesn't diverge to infinity. The approximation is by the naive escape time algorithm. This algorithm runs 1000 iterations on a given point in the complex plane and keeps the point in the set if the value at that iteration is below a certain threshold. This threshold was chosen to be a modulus under 4 as any complex number with it's real or imaginary part being above 2 will always diverge.
+		</p>
+		</div>
+		<div class = "columnfar">
+		</div>
+		</div>
+		
+	    <h2 style="padding-bottom: 15px;font-size: 40px;color: darkred;">String art algorithm<center></h2>
+	    <div class="row">
+	    <div class = "columnleft">
+	    <video width="320" height="240" controls>
+		<source src="anim/monalisa.mov" type="video/mp4">
+	      Your browser does not support the video tag.
+		</video>
+	    </div>
+	    <div class = "columnright">
+	    <br><br>
+	    <p>This animation takes in an image and draws it using a set of strings. At each step of the algorithm, it chooses the line which covers the darkest pixels in the inputted image to add to the string art. It then switches all pixels which that line covers in the input image to white and repeats the process.</p>
+	    </div>
+	    </div>
+	
+	    <h2 style="padding-bottom: 15px;font-size: 40px;color: darkred;">Sierpinski arrowhead curve<center></h2>
+	    <div class="row">
+	    <div class="columnleft">
+	    <video width="320" height="240" controls>
+		<source src="anim/Sierpinski.mp4" type="video/mp4">
+	      Your browser does not support the video tag.
+		</video>
+	    </div>
+	    <div class="columnright">
+	    <br><br>
+	    <p>This animation is an approximation of the Sierpinski triangle. The Sierpinski triangle is a fractal in which smaller equaliateral triangles are drawn inside one larger equaliateral triangle. The approximation here uses the arrowhead curve. At each iteration, each line is split into three seperate lines which taken together over many iterations resembles the Sierpinski triangle.</p>
+	    </div>
+	    </div>
+
+	    <h2 style="padding-bottom: 15px;font-size: 40px;color: darkred;">Creating n-gons using force-directed graphs<center></h2>
+	    <div class="row">
+	    <div class="columnleft">
+	    <video width="320" height="240" controls>
+		<source src="anim/15-gon.mp4" type="video/mp4">
+	      Your browser does not support the video tag.
+		</video>
+	    </div>
+	    <div class="columnright">
+		<br><br>
+	    <p>This animation uses Eade's spring force directed algorithm to draw a regular polygon using a random set of points. The Eades algorithm is used to create network diagrams such that vertices are optimally spaced. It does this through having vertices act as repulsive magnets and edges as springs. To get it to create n-gons n random points are initialized which are connected by edges such that each vertex connects to only 2 other vertices and each edge is of the same length. At each iteration the repulsive and attractive forces are calculated and the vertices are moved.</p>
+	    </div>
+	    </div>
+	    
+	    	    	    <h2 style="padding-bottom: 15px;font-size: 40px;color: darkred;">Graham Scan algorithm<center></h2>
+	    <div class="row">
+	    <div class="columnleft">
+	    <table>
+		  <tr>
+		    <th style="width: 100px;">n = 5</th>
+		    <th style="width: 100px;">n = 50</th>
+		    <th style="width: 100px;">n = 500</th>
+		  </tr>
+		  <tr>
+		    <td><img src="anim/n5_convexhull.png" width="100px" height="100px"></td>
+		    <td><img src="anim/n50_convexhull.png" width="100px" height="100px"></td>
+		    <td><img src="anim/n500_convexhull.png" width="100px" height="100px"></td>
+		  </tr>
+	    </table>
+	    <table>
+		<tr>
+		    <th>Run time</th>
+		</tr>
+		<tr>
+		    <td><img src="anim/runtime.png" width="300px" height="200px"></td>
+		</tr>
+	    </table>
+	    </div>
+	    <div class="columnright">
+	    <br><br>
+	    <p>The convex hull of a set of points is the set of all possible convex combinations formed by the points. Graham Scan is an algorithm for finding the convex hull of a finite set of points. The algorithm is performed through the following steps:</p>
+	    <ol>
+	    <li>A starting point is found by finding the point in the set with the smallest y value. If there is a tie, the one with the smallest x value will be taken.</li>
+	    <li>The rest of the points are ranked according to their polar angle with respect to the starting point. In the result of a tie, the farthest point is taken and the rest are removed.
+	    <li>Points are considered sequentially. Points which form a left-handed or counter-clockwise turn will be added to the convex hull perimeter but those which form a right-handed or clockwise turn will be removed.
+	    The Graham Scan algorithm has time complexity O(n log n)</li>
+	    </ol>
+	    </div>
+	    </div>
+	    
+	    	    	    <h2 style="padding-bottom: 15px;font-size: 40px;color: darkred;">Bowyer Watson triangulation<center></h2>
+	    <div class="row">
+	    <div class="columnleft">
+	    <table>
+		  <tr>
+		    <th style="width: 100px;">n = 5</th>
+		    <th style="width: 100px;">n = 15</th>
+		    <th style="width: 100px;">n = 50</th>
+		  </tr>
+		  <tr>
+		    <td><img src="anim/n5Triangulation.png" width="100px" height="100px"></td>
+		    <td><img src="anim/n15Triangulation.png" width="100px" height="100px"></td>
+		    <td><img src="anim/n50Triangulation.png" width="100px" height="100px"></td>
+		  </tr>
+	    </table>
+	    <table>
+		<tr>
+		    <th>Run time</th>
+		</tr>
+		<tr>
+		    <td><img src="anim/BowyerWatson_runtime.png" width="300px" height="200px"></td>
+		</tr>
+	    </table>
+	    </div>
+	    <div class="columnright">
+	    <br><br>
+	    <p>A triangulation of a set of points is the division of the convex hull made from those points into triangles. A Delaunay triangulation is a type of triangulation in which no points lie inside the circumcircle created by each triangle. These triangulations have many applications. For example they are used to created triangulated irregular networks which give a vector representation of a 3D surface in GIS applications.</p>
+	    <p>The Bowyer Watson algorithm is a method for constructing a Delaunay triangulation for a set of finite points. It works in the following steps:</p>
+	    <ol>
+	    <li>A super triangle is created such that all points are contained within the super triangle. There are many ways of doing so, depending on if the points are generated from a predefined area and how efficient you need to be.</li>
+	    <li>Points in the set are added one at a time, adding triangles extending from the point to the polygon hole&#39;s edge. The triangles which contain the new point in its circumcircle are deleted, creating a new polygon hole.</li>
+	    <li>Afer all points are added, triangles which are touching the super triangle are deleted, leaving a delaunay triangulation of the set of points.</li>
+	    </ol>
+
+	    </div>
+	    </div>
+		
+	    <h2 style="padding-bottom: 15px;font-size: 40px;color: darkred;">Drawing the Mona Lisa with probability<center></h2>
+	    <div class="row">
+	    <div class="columnleft">
+	    <video width="320" height="240" controls>
+		<source src="anim/monalisadrawing.mp4" type="video/mp4">
+	      Your browser does not support the video tag.
+		</video>
+	    </div>
+	    <div class="columnright">
+	    <br><br>
+	    <p>This animation takes an image as input and draws a path resembling the image. The input image is taken as a set of points with an associated brightness value. For each point, the brightness value is used to calculate the probability of that point being included in the path. A bernoulli trial is done for each pixel and the path is connected using the naive solution to the travelling salesman problem which finds the next point by minimizing Euclidean distance.</p>
+	    </div>
+	    </div>
+	    
+	    <h2 style="padding-bottom: 15px;font-size: 40px;color: darkred;">Primality Testing<center></h2>
+	    <div class="row">
+	    <div class="columnleft">
+		<table>
+		  <tr>
+		    <th style="width: 100px;">2<sup>3</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>5</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>7</sup>-1  </th>
+		  </tr>
+		  <tr>
+		    <th style="width: 100px;">2<sup>13</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>17</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>19</sup>-1  </th>
+		  </tr>
+		  <tr>
+		    <th style="width: 100px;">2<sup>31</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>61</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>89</sup>-1  </th>
+		  </tr>		 
+		  <tr>
+		    <th style="width: 100px;">2<sup>107</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>127</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>521</sup>-1  </th>
+		  </tr>
+		  <tr>
+		    <th style="width: 100px;">2<sup>607</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>1279</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>2203</sup>-1  </th>
+		  </tr>
+		  <tr>
+		    <th style="width: 100px;">2<sup>2281</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>3217</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>4253</sup>-1  </th>
+		  </tr>
+		<tr>
+		    <th style="width: 100px;">2<sup>4423</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>9689</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>9941</sup>-1  </th>
+		  </tr>
+		  
+		</table>
+	    </div>
+	    <div class="columnright">
+		<br><br>
+	    <p>
+	    To the left are all Mersenne primes with prime exponenets between 3 and 10000 I've found using a primality testing algorithm. The code contains a set of functions which can discover large primes based on a combination of the Fermat and Lucas Lehmer tests. From a given start and ending point it searches through integers which are prime using Fermat's test. Primes which pass Fermat's test are then inputted into a Lucas Lehmer test to see if 2<sup>p</sup> - 1 is prime. </p>
+	    </div>
+	    </div>
+	    		
+	</div>
+    </main>
+</body>
+</html>
