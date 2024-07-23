@@ -76,6 +76,9 @@
         .columnright{
         flex: 45%;
         }
+	video {
+	max-width=100%;
+	}
         .buffer{
         Flex: 5%;
         }
@@ -120,55 +123,82 @@
 	</header>
 	<main>
 		<div class = "small-box">
-            <div class="row">
+		
+	    <div class="row">
                 <div class="column">
-                <h2>Research at the Princess Margaret Cancer Centre</h2>
-              <p>Over the past 4 years, I've been working at the Princess Margaret Cancer Research Centre on a research project in the Pugh Lab. The project utilizes a novel TCR sequencing method known as CapTCR for non-invasive immune monitoring of solid-tumour patients given adoptive T-cell therapy.
+                <h2>Research at the Frederickson lab</h2>
+              <p>Over the past year I've worked at the Frederickson lab at the University of Toronto. The lab focuses on the study of mutualisms, specifically between different species of Duckweed and their microbiome.</p>
+	      <p>I've worked on two projects over the course of my research. The primary project studies the changes in the microbiomes of Duckweed over different timepoints, in different culturing media, and over the rural to urban gradient. I've been responsible for analyzing the 16S sequence data and performing statistical tests to determine the dynamics of the microbial repertoire. The second project focuses on the assembly of a triploid genome for Duckweeds. I'm responsible for the analysis of coverage and synteny of the resulting assemblies.
+              Here is a link to the <a href=https://github.com/CameronKerr/SpatiotemporalMicrobiome>project GitHub.</a>
+              </p>
+              </div>
+              </div>
+	     <hr> 
+	    <div class="row">
+                <div class="column">
+                <h2>Animations and Algorithms</h2>
+              <p>Creating mathematical visualizations or algorithms is one of my hobbies. I've done visualizations in topics such as computational geometry, fractals, number theory, and probability. Most are implemented using Python and libraries such as Matplotlib for visualization. To the left is an example of an algorithm which can draw any image using a set of lines. More of these animations are presented and explained <a href=https://camhkerr.com/anim_and_algo.html>here.</a>
+              </div>
+	      <div class="column">
+	      <br>
+              <video style="max-width:80%;height: auto;" controls>
+		<source src="anim/monalisa.mov" type="video/mp4">
+	      Your browser does not support the video tag.
+		</video>
+		<br>
+              </div>
+              </div>
+	      
+	    <hr>
+	    <div class="row">
+                <div class="column">
+                <h2>UpKeep</h2>
+              <p>As I'm heading into my final year at UofT I've noticed that as the number of courses I've taken increases it is harder to maintain everything I've learned. I got the idea to create an application called UpKeep which can extract questions from the pdf of a textbook and then give you a random question from any of the textbooks you have stored. 
+	      </p>
+	      <p>I implemented this idea in Python and tied it to a html interface where users can add and remove textbooks and get a random question from any of the stored textbooks. The application works for certain textbooks but doesn't for others as pdf to text isn't perfect and the application runs off the assumption that questions are denoted by numbers followed by a period.
               <br><br>
-              This project has developed my ability to run bioinformatics pipelines on large multi-omics datasets as well as perform visualization and statistical analysis in R, Python, and Excel. In addition, this project has developed my ability to write manuscripts, perform literature reviews, and work with other researchers in a lab environment.
-              <br><br>
-              The figure to the right is an example of clone tracking, one of the main visualization techniques in the project. Clone tracking allows us to visualize the entire T-cell repertoire at a single timepoint, over multiple timepoints, and in a cross-patient manner. Clonotypes present in the infusion product and one other sample are coloured and tracked through all timepoints. The size of each section is dependent on the number of T-cells in that clonotype.
-              <br><br>
-              I've had the opportunity to present my research at the Trans-Atlantic Journeys in Cell and Gene Therapy joint meeting between researchers at the University of Toronto and the University of Manchester.
-              <br><br>
-              Currently, the manuscript has been written and is under review for publication. Here is a link to the <a href=https://github.com/pughlab/CapTCR-TIL-Tracking>project GitHub.</a>
+              Here is a link to the <a href=https://github.com/CameronKerr/UpKeep>project GitHub.</a>
               </p>
               </div>
               <div class="column">
-              <img style="max-width:80%;height: auto;width: auto\9; /* ie8 */" src=pic/CapTCR.png alt="Clonetrack" width="360" height="420">
+	      <br>
+              <img style="max-width:80%;height: auto;width: auto\9; /* ie8 */" src=pic/upkeep.png alt="Clonetrack" width="360" height="420">
+	      <br>
               </div>
-              </div>
-        <hr>
-        <h2>Mathematical Visualizations</h2>
+              </div>  
+	    
+	    <hr>
             <div class="row">
                 <div class="column">
-                    <p>After many arduous math courses at the University of Toronto, mathematical visualizations and computational geometry algorithms have become a new hobby of mine. Here is my growing list of programs.</p>
-                    <h3>Graham Scan Algorithm: Convex Hull calculation</h3>
-
-                    <p>The convex hull of a set of points is the set of all possible convex combinations formed by the points. It is one of the most important concepts in linear programming and optimization. Graham Scan is an algorithm for finding the convex hull of a finite set of points. 
-                    <br><br>
-                    The program's functions can be used individually for the calculation of the convex hull of any input points. However, standalone execution calculates the convex hull of n randomly generated points where n is user provided. The other program contained analyzes and plots the runtime complexity of the algorithm which is O(n log n).
-                    <br><br>
-                    The GitHub can be accessed<a href=https://github.com/CameronKerr/ConvexHull-GrahamScan>here.</a>
-                    </p>
-
-                    <h3>Bowyer Watson Algorithm: Triangulation calculation</h3>
-
-                    <p>A triangulation of a set of points is the division of the convex hull made from those points into triangles. A Delaunay triangulation is a type of triangulation in which no points lie inside the circumcircle created by each triangle. These triangulations have many applications. For example they are used to created triangulated irregular networks which give a vector representation of a 3D surface in GIS applications.
-                    <br><br>
-                    Similar to the Graham Scan program, the functions can be used individually for the calculation of the triangulation of any input points. However, standalone execution calculates the triangulation of n randomly generated points where n is user provided. The other program contained analyzes and plots the runtime complexity of the algorithm which is O(n log n).
-                    
-                    The GitHub can be accessed<a href=https://github.com/CameronKerr/Triangulation-BowyerWatson>here.</a>
-                    </p>
-                    </div>
-                <div class="column">
-                    <img style="max-width:80%;height: auto;width: auto\9; /* ie8 */" src="pic/mathvis.png" alt="Triangulation" width="500" height="500">
-                </div>
-            </div>
+                <h2>Research at the Princess Margaret Cancer Centre</h2>
+              <p>From 2019 to 2023, I worked at the Princess Margaret Cancer Research Centre on a research project in the Pugh Lab. The project utilizes a novel TCR sequencing method known as CapTCR for non-invasive immune monitoring of solid-tumour patients given adoptive T-cell therapy.
+              <br><br>
+              This project has developed my ability to run bioinformatics pipelines on large multi-omics datasets as well as perform visualization and statistical analysis in R, Python, and Excel. In addition, this project has developed my ability to write manuscripts, perform literature reviews, and work with other researchers in a lab environment. The figure to the right is an example of clone tracking, one of the main visualization techniques in the project.
+              <br><br>
+              I've had the opportunity to present my research at the Trans-Atlantic Journeys in Cell and Gene Therapy joint meeting between researchers at the University of Toronto and the University of Manchester.
+              <br><br>
+              Here is a link to the <a href=https://github.com/pughlab/CapTCR-TIL-Tracking>project GitHub.</a>
+              </p>
+              </div>
+              <div class="column">
+	      <br>
+              <img style="max-width:80%;height: auto;width: auto\9; /* ie8 */" src=pic/CapTCR.png alt="Clonetrack" width="360" height="420">
+	      <br>
+              </div>
+              </div>
 
             <hr>
             <h2>Immune 2.0</h2>
                 <p>A part of the Pioneer international competition, my partner Ahmed Moselhi and I developed Immune 2.0. The project used a machine learning alrgorithm to predict T-cell binding. This algorithm would allow for rapid testing of new vaccines and immunotherapies. Immune 2.0 ended up becoming a winning project a part of the April 2019 cohort. We were also interviewed by Laura Deming about the project.<a href=https://youtu.be/009QDAqK6d4?list=PLCvXYFpVaqCbeI24HtKqK09pWFLY8r5Di>Link to video.</a><p>
+	    <hr>
+            <h2>CaMS-Vis: Cancer Mutational Signature Visualization</h2>
+
+                <p>The construction of mutational catalogues are necessary for the analysis for mutational signatures for many genetically-associated diseases but are highly studies in cancer. Visualizations from variant called files are necessary for these analyses. CaMS-Vis is a tool for the visualization of mutational catalogues based on grouping into the 6 mutation classes and 96 mutation types from a binary variant call format (bcf) file.
+                <br><br>
+                The GitHub can be accessed<a href=https://github.com/CameronKerr/CaMS-Vis>here.</a>
+                <br>
+            <img style="max-width:80%;height: auto;width: auto\9; /* ie8 */" src="pic/CaMS.png" alt="CaMS" width="1050" height="158">
+            </p>
             <hr>
             <h2>Various Research Proposals</h2>
 
@@ -194,21 +224,6 @@
                 <br><br>
                 The research proposal can be found<a href='file/Xist Paper V2.pdf'>here.</a>
                 </p>
-            <hr>
-            <h2>CaMS-Vis: Cancer Mutational Signature Visualization</h2>
-
-                <p>The construction of mutational catalogues are necessary for the analysis for mutational signatures for many genetically-associated diseases but are highly studies in cancer. Visualizations from variant called files are necessary for these analyses. CaMS-Vis is a tool for the visualization of mutational catalogues based on grouping into the 6 mutation classes and 96 mutation types from a binary variant call format (bcf) file.
-                <br><br>
-                The GitHub can be accessed<a href=https://github.com/CameronKerr/CaMS-Vis>here.</a>
-                <br>
-            <img style="max-width:80%;height: auto;width: auto\9; /* ie8 */" src="pic/CaMS.png" alt="CaMS" width="1050" height="158">
-            </p>
-            <hr>
-            <h2>Using CRISPR Cas9 to Genetically Modify E.coli</h2>
-
-                <p>I used the CRISPR Cas9 system to modify a non-pathogenic strain of E.coli in order to be able to fluoresce. This was my first introduction to many wet lab techniques and organizing an experiment.
-                </p>
-                <br>
             </div>
     </div>
 </main>
