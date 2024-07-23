@@ -92,6 +92,13 @@
 			function unhover_reading(element) {
 				element.setAttribute('src', 'pic/Folder_reading.png');
 			 }
+			function hover_animation(element) {
+				element.setAttribute('src', 'pic/Folder_hover_animation.png');
+			}
+			
+			function unhover_animation(element) {
+				element.setAttribute('src', 'pic/Folder_animation.png');
+			 }
 			 function hover_home(element) {
 				element.setAttribute('src', 'pic/home_hover.png');
 			}
@@ -101,6 +108,7 @@
  			}
 		</script>
 			<a href=working.html><img src="pic/Folder_working.png" onmouseover="hover_working(this);" onmouseout="unhover_working(this);"/></a>
+			<a href=anim_and_algo.html><img src="pic/Folder_animation.png" onmouseover="hover_animation(this);" onmouseout="unhover_animation(this);"/></a>
 			<a href=writing.html><img src="pic/Folder_writing.png" onmouseover="hover_writing(this);" onmouseout="unhover_writing(this);"/></a>
 			<a href=reading.html><img src="pic/Folder_reading.png" onmouseover="hover_reading(this);" onmouseout="unhover_reading(this);"/></a>
 			<a href="index.html"><img style="width: 10%; height:10%; position: absolute;top: 25px;right: 0px;" src="pic/home.png" onmouseover="hover_home(this);" onmouseout="unhover_home(this);"/></a>
