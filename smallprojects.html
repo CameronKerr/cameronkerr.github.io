@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mathematical Visualizations</title>
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #FAF5E4; /* cream */
+      color: #111;
+      font-family: "EB Garamond", Georgia, serif;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      padding: 2.5em 1em 1.5em;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #8B3A28; /* rust */
+      margin-bottom: 0.2em;
+    }
+
+    header a {
+      font-size: 0.9rem;
+      color: #A84C31;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.2em 3em;
+    }
+
+    section {
+      margin-top: 3em;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #8B3A28;
+      margin-bottom: 0.8em;
+    }
+
+    .row {
+      display: flex;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    .media {
+      flex: 1 1 280px;
+    }
+
+    .text {
+      flex: 2 1 400px;
+    }
+
+    video, img {
+      max-width: 100%;
+      border: 1px solid #43302E;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1em;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #43302E;
+      padding: 0.3em;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    ol {
+      padding-left: 1.2em;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 4em;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Mathematical Visualizations</h1>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<main>
+
+  <section>
+    <h2>Mandelbrot Set Visualization</h2>
+    <div class="row">
+      <div class="media">
+        <video controls>
+          <source src="anim/highquality_mandelbrot.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="text">
+        <p>
+          This animation is an approximation of the mandelbrot set. The mandelbrot set is a subset of the complex plane where the complex number c is in the set if the sequencing taking z to z<sup>2</sup> + c doesn't diverge to infinity. The approximation is by the naive escape time algorithm. This algorithm runs 1000 iterations on a given point in the complex plane and keeps the point in the set if the value at that iteration is below a certain threshold. This threshold was chosen to be a modulus under 4 as any complex number with it's real or imaginary part being above 2 will always diverge.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>String Art Algorithm</h2>
+    <div class="row">
+      <div class="media">
+        <video controls>
+          <source src="anim/monalisa.mov" type="video/mp4">
+        </video>
+      </div>
+      <div class="text">
+        <p>
+          This animation takes in an image and draws it using a set of strings. At each step of the algorithm, it chooses the line which covers the darkest pixels in the inputted image to add to the string art. It then switches all pixels which that line covers in the input image to white and repeats the process.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sierpinski Arrowhead Curve</h2>
+    <div class="row">
+      <div class="media">
+        <video controls>
+          <source src="anim/Sierpinski.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="text">
+        <p>
+          This animation is an approximation of the Sierpinski triangle. The Sierpinski triangle is a fractal in which smaller equaliateral triangles are drawn inside one larger equaliateral triangle. The approximation here uses the arrowhead curve. At each iteration, each line is split into three seperate lines which taken together over many iterations resembles the Sierpinski triangle.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Force-Directed Construction of n-gons</h2>
+    <div class="row">
+      <div class="media">
+        <video controls>
+          <source src="anim/15-gon.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="text">
+        <p>
+          This animation uses Eade's spring force directed algorithm to draw a regular polygon using a random set of points. The Eades algorithm is used to create network diagrams such that vertices are optimally spaced. It does this through having vertices act as repulsive magnets and edges as springs. To get it to create n-gons n random points are initialized which are connected by edges such that each vertex connects to only 2 other vertices and each edge is of the same length. At each iteration the repulsive and attractive forces are calculated and the vertices are moved.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Graham Scan Algorithm</h2>
+    <div class="row">
+      <div class="media">
+        <table>
+          <tr>
+            <th>n = 5</th><th>n = 50</th><th>n = 500</th>
+          </tr>
+          <tr>
+            <td><img src="anim/n5_convexhull.png"></td>
+            <td><img src="anim/n50_convexhull.png"></td>
+            <td><img src="anim/n500_convexhull.png"></td>
+          </tr>
+        </table>
+        <img src="anim/runtime.png">
+      </div>
+      <div class="text">
+         <p>The convex hull of a set of points is the set of all possible convex combinations formed by the points. Graham Scan is an algorithm for finding the convex hull of a finite set of points. The algorithm is performed through the following steps:</p>
+	    <ol>
+	    <li>A starting point is found by finding the point in the set with the smallest y value. If there is a tie, the one with the smallest x value will be taken.</li>
+	    <li>The rest of the points are ranked according to their polar angle with respect to the starting point. In the result of a tie, the farthest point is taken and the rest are removed.
+	    <li>Points are considered sequentially. Points which form a left-handed or counter-clockwise turn will be added to the convex hull perimeter but those which form a right-handed or clockwise turn will be removed.
+	    The Graham Scan algorithm has time complexity O(n log n)</li>
+	    </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Bowyer–Watson Triangulation</h2>
+    <div class="row">
+      <div class="media">
+        <table>
+          <tr>
+            <th>n = 5</th><th>n = 15</th><th>n = 50</th>
+          </tr>
+          <tr>
+            <td><img src="anim/n5Triangulation.png"></td>
+            <td><img src="anim/n15Triangulation.png"></td>
+            <td><img src="anim/n50Triangulation.png"></td>
+          </tr>
+        </table>
+        <img src="anim/BowyerWatson_runtime.png">
+      </div>
+      <div class="text">
+        <p>A triangulation of a set of points is the division of the convex hull made from those points into triangles. A Delaunay triangulation is a type of triangulation in which no points lie inside the circumcircle created by each triangle. These triangulations have many applications. For example they are used to created triangulated irregular networks which give a vector representation of a 3D surface in GIS applications.</p>
+	    <p>The Bowyer Watson algorithm is a method for constructing a Delaunay triangulation for a set of finite points. It works in the following steps:</p>
+	    <ol>
+	    <li>A super triangle is created such that all points are contained within the super triangle. There are many ways of doing so, depending on if the points are generated from a predefined area and how efficient you need to be.</li>
+	    <li>Points in the set are added one at a time, adding triangles extending from the point to the polygon hole&#39;s edge. The triangles which contain the new point in its circumcircle are deleted, creating a new polygon hole.</li>
+	    <li>Afer all points are added, triangles which are touching the super triangle are deleted, leaving a delaunay triangulation of the set of points.</li>
+	    </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Drawing the Mona Lisa with Probability</h2>
+    <div class="row">
+      <div class="media">
+        <video controls>
+          <source src="anim/monalisadrawing.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="text">
+         <p>This animation takes an image as input and draws a path resembling the image. The input image is taken as a set of points with an associated brightness value. For each point, the brightness value is used to calculate the probability of that point being included in the path. A bernoulli trial is done for each pixel and the path is connected using the naive solution to the travelling salesman problem which finds the next point by minimizing Euclidean distance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Primality Testing</h2>
+    <div class="row">
+      <div class="media">
+        		<table>
+		  <tr>
+		    <th style="width: 100px;">2<sup>3</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>5</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>7</sup>-1  </th>
+		  </tr>
+		  <tr>
+		    <th style="width: 100px;">2<sup>13</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>17</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>19</sup>-1  </th>
+		  </tr>
+		  <tr>
+		    <th style="width: 100px;">2<sup>31</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>61</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>89</sup>-1  </th>
+		  </tr>		 
+		  <tr>
+		    <th style="width: 100px;">2<sup>107</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>127</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>521</sup>-1  </th>
+		  </tr>
+		  <tr>
+		    <th style="width: 100px;">2<sup>607</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>1279</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>2203</sup>-1  </th>
+		  </tr>
+		  <tr>
+		    <th style="width: 100px;">2<sup>2281</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>3217</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>4253</sup>-1  </th>
+		  </tr>
+		<tr>
+		    <th style="width: 100px;">2<sup>4423</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>9689</sup>-1  </th>
+		    <th style="width: 100px;">2<sup>9941</sup>-1  </th>
+		  </tr>
+		  
+		</table>
+      </div>
+      <div class="text">
+        <p>
+	    To the left are all Mersenne primes with prime exponents between 3 and 10000 I've found using a primality testing algorithm. The code contains a set of functions which can discover large primes based on a combination of the Fermat and Lucas Lehmer tests. From a given start and ending point it searches through integers which are prime using Fermat's test. Primes which pass Fermat's test are then inputted into a Lucas Lehmer test to see if 2<sup>p</sup> - 1 is prime. </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
